@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引用css js -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <!-- 引用 markdown -->
+    <link rel="stylesheet" href="/assets/editormd/css/editormd.min.css" />
+    <script src="/assets/editormd/editormd.min.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="container">
+        {{template "navbar"}}
+    </div>
+    
+    <!-- 添加markdown -->
+    <div style="height: 1000px;">
+    <div id="test-editor">
+        <textarea style="display:none;">
+            {{ .MarkdownContent }}
+        </textarea>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/assets/editormd/editormd.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var editor = editormd("test-editor", {
+                width  : "90%",
+                height : "100%",
+                path   : "/assets/editormd/lib/"
+            });
+        });
+    </script>
+    </div>
+
+</body>
+</html>

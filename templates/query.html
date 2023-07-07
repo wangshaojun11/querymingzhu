@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引用css js -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="container">
+        {{template "navbar"}}
+    <!-- 表单 -->
+    <div class="container">
+        <form method="post" action="/query/databases">
+          <div class="mb-3">
+            <label for="exampleInputNameSpace" class="form-label">NameSpace</label>
+            <input type="text" name="namespace" class="form-control" id="exampleInputNameSpace" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputStartDate" class="form-label">StartDate</label>
+            <input type="date" name="startdate" class="form-control" id="exampleInputStartDate">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEndDate" class="form-label">EndDate</label>
+            <input type="date" name="enddate" class="form-control" id="exampleInputEndDate">
+          </div>
+          <button type="submit" class="btn btn-primary">查询</button>
+        </form>
+      </div>
+</body>
+</html>

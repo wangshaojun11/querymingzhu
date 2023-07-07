@@ -1,0 +1,16 @@
+server:
+  port: 1016
+datasource:
+  driverName: mysql
+  host: 127.0.0.1
+  port: 3307
+  database: alertsnitch
+  username: alertsnitch
+  password: alertsnitch
+  charset: utf8
+config:
+  markdown: |
+    明珠项目
+    # 明珠
+    ## 监控
+    ## 发布
